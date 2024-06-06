@@ -1,0 +1,24 @@
+<h1> Create new event </h1>
+
+<%= form_with model: @event do |form| %>
+  <fieldset>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </fieldset>
+
+  <fieldset>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </fieldset>
+
+  <fieldset>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </fieldset>
+
+  <fieldset>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </fieldset>
+  <%= form.submit %>
+<% end %>
