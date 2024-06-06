@@ -1,8 +1,5 @@
 <h1>Hi!, This is where all of your events will be listed</h1>
 
-<ul>
-  <% @events.each do |event| %>
-    <li><%= link_to event.date %> , <%= link_to event.location %></li>
-  <% end %>
-</ul>
+<%= link_to "Create Event", new_event_path %>
 
+<%= render partial: "list", locals: { events: @events } %>
