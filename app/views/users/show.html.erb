@@ -2,3 +2,7 @@
 <h2>The following are the events that you've created</h2>
 
 <%= render partial: "events/list", locals: { events: @events } %>
+
+<h2>Attended Events</h2>
+
+<%= render partial: "events/list", locals: { events: @attended_events } %>
