@@ -2,4 +2,8 @@
 
 <%= link_to "Create Event", new_event_path %>
 
-<%= render partial: "list", locals: { events: @events } %>
+<h2>Upcoming Events</h2>
+<%= render partial: "list", locals: { events: @events.upcoming } %>
+
+<h2>Past Events</h2>
+<%= render partial: "list", locals: { events: @events.past } %>

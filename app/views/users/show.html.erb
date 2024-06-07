@@ -3,6 +3,8 @@
 
 <%= render partial: "events/list", locals: { events: @events } %>
 
-<h2>Attended Events</h2>
+<h2>Past Attended Events</h2>
+<%= render partial: "events/list", locals: { events: @attended_events.past } %>
 
-<%= render partial: "events/list", locals: { events: @attended_events } %>
+<h2>Future Events</h2>
+<%= render partial: "events/list", locals: { events: @attended_events.upcoming } %>
