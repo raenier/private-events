@@ -8,4 +8,8 @@ class User < ApplicationRecord
 
   has_many :attendances
   has_many :attended_events, through: :attendances, source: :event
+
+  def full_name
+    "#{first_name} #{second_name}"
+  end
 end

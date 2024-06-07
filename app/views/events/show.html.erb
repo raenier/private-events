@@ -7,3 +7,11 @@
     <li><%= @event.date %></li>
   </ul>
 </div>
+
+<h2>Attendees</h2>
+
+<ol>
+  <% @event.attendees.each do |attendee| %>
+  <li><%= attendee.full_name %></li>
+  <% end %>
+</ol>
